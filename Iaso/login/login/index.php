@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,7 +11,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>MA</title>
+		<title>IASO</title>
 		<meta name="description" content="Free Bootstrap 4 Theme by ProBootstrap.com">
 		<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
@@ -37,24 +38,24 @@
 
 
 	</head>
-	<body>
+	<body background="1.jpg">
 	
 	 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
       <div class="container" style="background-color: rgba(0, 0, 0, 0.5);">
-        <a class="navbar-brand" href="/">IASO</a>
+        <a class="navbar-brand" href="/"><b>IASO</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="index.html">HOME</a></li>
-			<li class="nav-item"><a class="nav-link" href="msg.php">VAULT</a></li>
+			<li class="nav-item"><a class="nav-link" href="vault.php">VAULT</a></li>
             <li class="nav-item"><a class="nav-link" href="hospital/index.php">HOSPITAL</a></li>
             <li class="nav-item"><a class="nav-link" href="laboratory/index.php">LABORATORY</a></li>
             <li class="nav-item"><a class="nav-link" href="pharmacy/index.php">PHARMACY</a></li>
-			<li class="nav-item"><a class="nav-link" href="dental/index.php">BOOK DOC</a></li>
+			<li class="nav-item"><a class="nav-link" href="bookdoc/index.php">BOOK DOC</a></li>
 			<li class="nav-item"><a class="nav-link" href="myacc/index.php">ACCOUNT</a></li>
-			<li class="nav-item"><a class="nav-link" href="../">LOGOUT</a></li>
+			<li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>
 			 
 			 
      
@@ -77,12 +78,12 @@
           <div class="col-md">
 		  			
 
-            <h2 class="heading mb-2 display-4 font-light probootstrap-animate">Explore The Services</h2>
+            <h2 class="heading mb-2 display-4 font-light probootstrap-animate" align="center">Explore The Services</h2>
             
              <!-- <a href="onepage.html" role="button" class="btn btn-primary p-3 mr-3 pl-5 pr-5 text-uppercase d-lg-inline d-md-inline d-sm-block d-block mb-3">See OnePage Verion</a> --> 
             </p>
           </div> 
-          <div class="col-md probootstrap-animate">
+         <!-- <div class="col-md probootstrap-animate">
             <form action="serve/index.php" method="post" class="probootstrap-form">
               <div class="form-group">
                 <div class="row mb-5">
@@ -133,7 +134,7 @@
                   </div>
                  
                 </div>
-                <!-- END row -->
+                
                 <div class="row mb-5">
 				
 				 <div class="col-md">
@@ -193,12 +194,12 @@
                     </div>
                   </div>
 				</div>
-                <!-- END row  -->
+                
                 <div class="row">
                   <div class="col-md">
-                   <!-- <label for="round" class="mr-5"><input type="radio" id="round" name="direction">  Round</label>
+                   <label for="round" class="mr-5"><input type="radio" id="round" name="direction">  Round</label>
                     <label for="oneway"><input type="radio" id="oneway" name="direction">  Oneway</label>
-                  </div>  -->
+                  </div> 
                   <div class="col-md">
                     <input type="submit" value="Search" class="btn btn-primary btn-block">
                   </div>
@@ -211,8 +212,7 @@
 	  </div>
     
     </section>
-    <!-- END section -->
-    
+    -->
 
    
     

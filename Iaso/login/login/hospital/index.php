@@ -1,5 +1,7 @@
 <?php
 session_start();
+if(!isset($_SESSION['idno']))
+header("location: ../../");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,7 @@ session_start();
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>MA</title>
+		<title>IASO</title>
 		<meta name="description" content="Free Bootstrap 4 Theme by ProBootstrap.com">
 		<meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
@@ -29,41 +31,33 @@ session_start();
     <link rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
 
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
+
     <link rel="stylesheet" href="assets/css/select2.css">
     
 
     <link rel="stylesheet" href="assets/css/helpers.css">
     <link rel="stylesheet" href="assets/css/style.css">
-	
-	
-
 
 	</head>
 	<body>
-	
-	 <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
+  
+
+    <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
       <div class="container" style="background-color: rgba(0, 0, 0, 0.5);">
-        <a class="navbar-brand" href="/">IASO</a>
+        <a class="navbar-brand" href="/"><b>IASO</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="../">HOME</a></li>
 			<li class="nav-item"><a class="nav-link" href="msg.php">VAULT</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php">HOSPITAL</a></li>
-            <li class="nav-item"><a class="nav-link" href="laboratory/index.php">LABORATORY</a></li>
-            <li class="nav-item"><a class="nav-link" href="pharmacy/index.php">PHARMACY</a></li>
-			<li class="nav-item"><a class="nav-link" href="dental/index.php">BOOK DOC</a></li>
-			<li class="nav-item"><a class="nav-link" href="myacc/index.php">ACCOUNT</a></li>
-			<li class="nav-item"><a class="nav-link" href="../">LOGOUT</a></li>
-			 
-			 
-     
-    </form> </li>
-
-            
+            <li class="nav-item active"><a class="nav-link" href="index.php">HOSPITAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="../laboratory/index.php">LABORATORY</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pharmacy/index.php">PHARMACY</a></li>
+			<li class="nav-item"><a class="nav-link" href="../bookdoc/index.php">BOOK DOC</a></li>
+			<li class="nav-item"><a class="nav-link" href="../myacc/index.php">ACCOUNT</a></li>
+			<li class="nav-item"><a class="nav-link" href="../logout.php">LOGOUT</a></li>            
           </ul>
 		  
         </div>
@@ -71,19 +65,21 @@ session_start();
     </nav>
     <!-- END nav -->
     
-    <section class="probootstrap_section"  style="background-image: url('downloads-bg.jpg'); opacity:0.8;"  data-stellar-background-ratio="0.5"  id="section-home">
-     <div >
-	
-			
+
+    <section class="probootstrap_section"   style="background-image: ;" data-stellar-background-ratio="0.5" id="section-home" >
+      <div class="overlay"></div>
+      <div class="container">
+       <div class="row mb-5">
+		
 		 <?php
 
 					$conn = new mysqli("localhost", "root", "root","iaso");
 					if ($conn->connect_error) {
 						die("Connection failed");
 					} 
-					$mobile=$_SESSION['mobile'];
+					$idno=$_SESSION['idno'];
 					$count=0;
-					$results = mysqli_query($conn, "SELECT * FROM userl	WHERE mobileno IN ('$mobile')");
+					$results = mysqli_query($conn, "SELECT * FROM users WHERE idno IN ('$idno')");
 
 					/*while ($row = mysqli_fetch_array($results))
 					{
@@ -92,6 +88,10 @@ session_start();
 					}*/
 
 					$result = mysqli_query($conn, "SELECT * FROM hospital WHERE place IN ('kochi')");
+					if($result == FALSE) 
+					{ 
+						die(mysql_error());
+					}
 					while ($row = mysqli_fetch_array($result))
 					{
 						if($count%2==0)
@@ -132,7 +132,7 @@ session_start();
     
     
 
-    
+    <!-- END section -->
 
 
   

@@ -4,13 +4,13 @@ $conn = new mysqli("localhost", "root", "root","iaso");
 if ($conn->connect_error) {
     die("Connection failed");
 } 
-$mobileno = $_POST['mobileno']; 
+$idno = $_POST['idno']; 
 $password = $_POST['password'];
-$result = mysqli_query($conn, "SELECT * FROM userl WHERE mobileno IN ('$mobileno') AND password IN ('$password')");
+$result = mysqli_query($conn, "SELECT * FROM userl u,users s WHERE s.idno IN ('$idno') AND u.password IN ('$password')");
 
 while ($row = mysqli_fetch_array($result))
 {
-$_SESSION['mobile']=$mobileno;
+$_SESSION['idno']=$idno;
 header("Location: login/index.php");
 mysqli_close($conn);
 exit;
