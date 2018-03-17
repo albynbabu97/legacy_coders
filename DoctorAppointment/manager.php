@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>HTML5 Doctor Appointment Scheduling (JavaScript/PHP)</title>
+        <title>Doctor Appointment Scheduling</title>
 
         <link type="text/css" rel="stylesheet" href="css/layout.css" />
 
