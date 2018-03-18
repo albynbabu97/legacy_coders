@@ -31,7 +31,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <?php
 session_start();
-$conn = new mysqli("localhost", "mits", "mits","db");
+$conn = new mysqli("localhost", "root", "root","iaso");
 if ($conn->connect_error) {
     die("Connection failed");
 } 
@@ -156,8 +156,7 @@ mysqli_close($conn);
 						
 						
 
-						$result = mysqli_query($conn, "SELECT * FROM serve
-							WHERE aname IN ('$aname')");
+						$result = mysqli_query($conn, "SELECT * FROM serve WHERE aname IN ('$aname')");
 
 						while ($row = mysqli_fetch_array($result))
 						{	

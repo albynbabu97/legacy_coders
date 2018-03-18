@@ -48,8 +48,34 @@
         </button>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
+            <?php $conn = new mysqli("localhost", "root", "root","iaso");
+            session_start();
+            $idno=$_SESSION['idno'];
+            $result = mysqli_query($conn, "SELECT desig FROM users WHERE idno IN ('$idno')");
+            $row = mysqli_fetch_array($result);
+            //session_start();
+            $idno=$_SESSION['idno'];
+            ?>
+            
+
             <li class="nav-item active"><a class="nav-link" href="index.html">HOME</a></li>
-			<li class="nav-item"><a class="nav-link" href="vault.php">VAULT</a></li>
+            <?php if($row[0]=="Doctor")
+            echo "<li class='nav-item'><a class='nav-link' href='pres.php'>PRESCRIPTION</a></li>";
+             //session_start();
+            $idno=$_SESSION['idno'];
+            ?>
+            
+            
+           <?php if ($row[0]=="Pharmasist") 
+          echo  "<li class='nav-item'><a class='nav-link' href='vault.php'>VIEW PRESCRIPTION</a></li>";
+          //session_start();
+            $idno=$_SESSION['idno'];
+          ?>
+            <?php  if (strcmp($row[0],"Patient")==0) 
+			      echo "<li class='nav-item'><a class='nav-link' href='vault.php'>VAULT</a></li>";
+            //session_start();
+            $idno=$_SESSION['idno'];
+            ?>
             <li class="nav-item"><a class="nav-link" href="hospital/index.php">HOSPITAL</a></li>
             <li class="nav-item"><a class="nav-link" href="laboratory/index.php">LABORATORY</a></li>
             <li class="nav-item"><a class="nav-link" href="pharmacy/index.php">PHARMACY</a></li>

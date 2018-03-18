@@ -3,9 +3,7 @@ session_start();
 include("dbconnection.php");
 if(isset($_GET["docid"]))
 {
-  $_SESSION["appdocid"] = $_GET["docid"]; 
-  $_SESSION["appdocname"] = $_GET["docname"];
-  $_SESSION["appdocsptype"] = $_GET["sptype"];
+  
   header("Location: appointmenttime.php");
 }
 ?>
@@ -57,13 +55,13 @@ if(isset($_GET["docid"]))
         <div class="collapse navbar-collapse" id="probootstrap-menu">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="../">HOME</a></li>
-      <li class="nav-item"><a class="nav-link" href="msg.php">VAULT</a></li>
+      <li class="nav-item"><a class="nav-link" href="vault.php">VAULT</a></li>
             <li class="nav-item"><a class="nav-link" href="../index.php">HOSPITAL</a></li>
             <li class="nav-item"><a class="nav-link" href="../laboratory/index.php">LABORATORY</a></li>
             <li class="nav-item"><a class="nav-link" href="../pharmacy/index.php">PHARMACY</a></li>
       <li class="nav-item active"><a class="nav-link" href="index.php">BOOK DOC</a></li>
       <li class="nav-item"><a class="nav-link" href="../myacc/index.php">ACCOUNT</a></li>
-      <li class="nav-item"><a class="nav-link" href="logout.php">LOGOUT</a></li>            
+      <li class="nav-item"><a class="nav-link" href="../logout.php">LOGOUT</a></li>            
           </ul>
       
         </div>

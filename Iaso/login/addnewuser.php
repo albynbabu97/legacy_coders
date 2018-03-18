@@ -20,7 +20,7 @@ mysqli_close($conn);
 exit;
 }
 mysqli_query($conn, "insert into userl(mobileno,password) VALUES('$mobileno','$password')");
-mysqli_query($conn, "insert into users(mobileno,fname,lname,email,idno,desig) VALUES('$mobileno','$firstname','$lastname','$mail','$idno','desig')");
+mysqli_query($conn, "insert into users(mobileno,fname,lname,email,idno,desig) VALUES('$mobileno','$firstname','$lastname','$mail','$idno','$desig')");
 mysqli_query($conn, "insert into userloc(mobileno,place) VALUES('$mobileno','kochi')");
 
 header("Location: index.html");

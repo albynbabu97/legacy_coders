@@ -77,7 +77,7 @@
                <h1 style="display:inline-block;color:rgb(120,0,200);">FILES</h1>
              <!--  <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/share.png');background-size:cover;float:right;" onclick="document.getElementById('overlay').style.display='block';"></div>-->
                <!--<div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/remove.png');background-size:cover;float:right;"></div>-->
-               <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url(images/upload.png);background-size:cover;float:right;" onclick="window.open('');"></div>
+               <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url(images/upload.png);background-size:cover;float:right;" onclick="window.open('upload.html');"></div>
               <!-- <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/download.png');background-size:cover;float:right;"></div>-->
             </div>
             <hr>

@@ -8,12 +8,13 @@ if(isset($_GET["docid"]))
 	$_SESSION["appdocid"] = $_GET["docid"]; 
 	$_SESSION["appdocname"] = $_GET["docname"];
 	$_SESSION["appdocsptype"] = $_GET["sptype"];
-	//header("Location: makeappoint.php");
+	//header("Location: success.php");
 }
 
 if(isset($_POST["btnapp"]))
 {
-$sql="INSERT INTO appointment(patid,atime,adate,docid,status,comment) VALUES ('$_SESSION[patid]','$_POST[radio]','$_POST[appdate]','$_SESSION[appdocid]','Pending','$_POST[appcomment]')";
+$sql="INSERT INTO appointment(patid,atime,adate,docid,status) VALUES ('$_SESSION[patid]','$_POST[radio]','$_POST[appdate]','$_SESSION[appdocid]','Pending)";
+header("Location: success.php");
 if (!mysql_query($sql,$con))
 {
 die('Error: ' . mysql_error());
